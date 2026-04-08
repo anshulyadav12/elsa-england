@@ -5,19 +5,19 @@ import { Megaphone, Calendar, ArrowRight, Facebook } from 'lucide-react';
 const Announcements = () => {
   const announcements = [
     {
-      title: 'Welcome Back to School!',
-      date: 'August 2025',
-      description: 'The PTA is excited to kick off another great year at England Elementary! We have many events and programs planned to support our students and staff.',
+      title: 'Movie Night Next Week!',
+      date: 'April 2026',
+      description: 'Get your blankets and popcorn ready! Our family movie night is happening next Friday. Join us on the school playground at dusk.',
     },
     {
-      title: 'Spring Picnic Announced',
-      date: 'March 2025',
-      description: "Mark your calendars — our annual Spring Picnic is coming up! It's our biggest community event of the year with food, games, and music.",
+      title: 'Spring Picnic Wrap-up',
+      date: 'March 2026',
+      description: "Thank you to everyone who joined us for our annual Spring Picnic! It was a huge success with over 800 attendees.",
     },
     {
-      title: 'PTA Membership Open',
-      date: 'September 2025',
-      description: 'Join the PTA today and help make this year the best one yet! Your membership directly funds important enrichment programs.',
+      title: 'Volunteer Opportunities Open',
+      date: 'February 2026',
+      description: 'We are looking for volunteers for our end-of-year events and upcoming programs. Check the volunteer page for details.',
     },
   ];
 

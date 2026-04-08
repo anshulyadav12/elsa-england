@@ -3,16 +3,24 @@ import { CheckCircle } from 'lucide-react';
 
 const SponsorTierSection = ({ tier, benefits, placeholderCount }) => {
   const tierColors = {
+    Platinum: 'bg-blue-600 text-white',
     Gold: 'bg-accent text-primary',
     Silver: 'bg-gray-200 text-gray-700',
     Bronze: 'bg-orange-200 text-orange-800',
   };
 
+  const tierIcons = {
+    Platinum: '💎',
+    Gold: '🥇',
+    Silver: '🥈',
+    Bronze: '🥉',
+  };
+
   return (
     <div className="mb-16">
       <div className="flex items-center gap-4 mb-6">
-        <h2 className={`text-2xl font-bold px-4 py-1 rounded-full ${tierColors[tier]}`}>
-          {tier === 'Gold' ? '🥇' : tier === 'Silver' ? '🥈' : '🥉'} {tier} Sponsors
+        <h2 className={`text-2xl font-bold px-6 py-2 rounded-full shadow-md ${tierColors[tier]}`}>
+          {tierIcons[tier]} {tier} Sponsors
         </h2>
       </div>
 

@@ -1,9 +1,12 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, Transition, Disclosure } from '@headlessui/react';
+import React, { Fragment, useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, Transition, Dialog } from '@headlessui/react';
 import { ChevronDown, Menu as MenuIcon, X } from 'lucide-react';
 
 const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
   const navigation = [
     { name: 'Home', href: '/' },
     {
@@ -35,6 +38,11 @@ const Navbar = () => {
     { name: 'Store', href: '/store' },
     { name: 'Sponsors', href: '/sponsors' },
   ];
+
+  // Close mobile menu on page change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <nav className="bg-primary text-white sticky top-0 z-50 shadow-lg">
@@ -109,76 +117,78 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center">
-            <Disclosure>
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-accent focus:outline-none">
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <X className="block h-6 h-6" aria-hidden="true" />
-                    ) : (
-                      <MenuIcon className="block h-6 h-6" aria-hidden="true" />
-                    )}
-                  </Disclosure.Button>
-
-                  <Transition
-                    enter="transition duration-100 ease-out"
-                    enterFrom="transform scale-95 opacity-0"
-                    enterTo="transform scale-100 opacity-100"
-                    leave="transition duration-75 ease-out"
-                    leaveFrom="transform scale-100 opacity-100"
-                    leaveTo="transform scale-95 opacity-0"
-                  >
-                    <Disclosure.Panel className="absolute top-16 left-0 w-full bg-primary border-t border-blue-800 shadow-xl overflow-y-auto max-h-[calc(100vh-64px)] lg:hidden">
-                      <div className="px-2 pt-2 pb-3 space-y-1">
-                        {navigation.map((item) => (
-                          item.children ? (
-                            <Disclosure key={item.name}>
-                              {({ open }) => (
-                                <>
-                                  <Disclosure.Button className="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent">
-                                    {item.name}
-                                    <ChevronDown className={`w-5 h-5 transition-transform ${open ? 'rotate-180' : ''}`} />
-                                  </Disclosure.Button>
-                                  <Disclosure.Panel className="pl-6 space-y-1">
-                                    {item.children.map((child) => (
-                                      <Link
-                                        key={child.name}
-                                        to={child.href}
-                                        className="block px-3 py-2 rounded-md text-base font-medium text-blue-200 hover:text-accent"
-                                      >
-                                        {child.name}
-                                      </Link>
-                                    ))}
-                                  </Disclosure.Panel>
-                                </>
-                              )}
-                            </Disclosure>
-                          ) : (
-                            <Link
-                              key={item.name}
-                              to={item.href}
-                              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent"
-                            >
-                              {item.name}
-                            </Link>
-                          )
-                        ))}
-                        <Link
-                          to="/membership"
-                          className="block px-3 py-2 rounded-md text-base font-bold bg-accent text-primary text-center mt-4"
-                        >
-                          Join PTA
-                        </Link>
-                      </div>
-                    </Disclosure.Panel>
-                  </Transition>
-                </>
-              )}
-            </Disclosure>
+            <button
+              onClick={() => setMobileMenuOpen(true)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-accent focus:outline-none"
+            >
+              <span className="sr-only">Open main menu</span>
+              <MenuIcon className="block h-6 h-6" aria-hidden="true" />
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Slide-over */}
+      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <div className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm" aria-hidden="true" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-primary px-6 py-6 sm:max-w-sm">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="-m-1.5 p-1.5 text-xl font-bold flex items-center gap-2">
+              <span className="text-2xl">🏫</span>
+              <span>Elsa England PTA</span>
+            </Link>
+            <button
+              type="button"
+              className="-m-2.5 rounded-md p-2.5 text-white"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="sr-only">Close menu</span>
+              <X className="h-6 h-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-blue-800">
+              <div className="space-y-2 py-6">
+                {navigation.map((item) => (
+                  <div key={item.name}>
+                    {item.children ? (
+                      <div className="space-y-1">
+                        <div className="px-3 py-2 text-base font-semibold text-accent uppercase tracking-wider">
+                          {item.name}
+                        </div>
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.name}
+                            to={child.href}
+                            className="block rounded-lg px-6 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-800"
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-800"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <div className="py-6">
+                <Link
+                  to="/membership"
+                  className="block rounded-lg px-3 py-2.5 text-base font-bold leading-7 bg-accent text-primary text-center"
+                >
+                  Join PTA
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Dialog.Panel>
+      </Dialog>
     </nav>
   );
 };

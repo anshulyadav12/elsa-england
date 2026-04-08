@@ -18,7 +18,7 @@ const Volunteer = () => {
       icon: '🎉',
       title: 'Event Volunteer',
       timeCommitment: '2–4 hrs/event',
-      description: 'Help set up, run, and clean up at PTA events like the Spring Picnic, Fun Run, and Meet Your Neighbor Night.',
+      description: 'Help set up, run, and clean up at PTA events like Movie Night, the Spring Picnic, and Meet Your Neighbor Night.',
       contactEmail: 'ptaenglandvc@outlook.com',
       contactSubject: 'Event Volunteer Sign Up',
     },
@@ -27,7 +27,7 @@ const Volunteer = () => {
       title: 'Homeroom Parent',
       timeCommitment: 'Ongoing',
       description: "Be the communication bridge between your child's teacher and classroom families. Coordinate class parties.",
-      contactEmail: 'elsaenglandptavp@gmail.com',
+      contactEmail: 'englandhrp@gmail.com',
       contactSubject: 'Homeroom Parent Interest',
     },
     {
@@ -92,7 +92,7 @@ const Volunteer = () => {
     <div>
       <PageHero 
         title="Volunteer With Us 🤝" 
-        subtitle="There's a place for everyone — and every hour counts" 
+        subtitle="There's a place for everyone, and every hour counts" 
       />
 
       <section className="py-20 bg-white">
@@ -100,7 +100,7 @@ const Volunteer = () => {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold text-primary mb-6">Every Hand Makes a Difference</h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              From a one-hour task to a full committee role, our volunteers are the heartbeat of the England PTA. No experience needed — just a willingness to help our students flourish!
+              From a one-hour task to a full committee role, our volunteers are the heartbeat of the England PTA. No experience needed: just a willingness to help our students flourish!
             </p>
           </div>
 

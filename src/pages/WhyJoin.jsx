@@ -6,7 +6,7 @@ import { BookOpen, Vote, Users, Bell, ArrowRight } from 'lucide-react';
 
 const WhyJoin = () => {
   const stats = [
-    { value: '500+', label: 'Families at England Elementary' },
+    { value: '1000+', label: 'Kids at England Elementary' },
     { value: '10+', label: 'PTA-funded programs and events' },
     { value: '100%', label: 'Of funds stay at our school' },
   ];

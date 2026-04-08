@@ -7,21 +7,21 @@ const Programs = () => {
     {
       icon: '🌍',
       title: 'Geography Superstars',
-      description: 'Students explore world geography through fun competitions and map activities.',
+      description: 'A monthly geography enrichment program where students learn about different countries and continents.',
       contactEmail: 'englandptapresident@gmail.com',
       contactSubject: 'Geography Superstars Inquiry',
     },
     {
       icon: '➕',
       title: 'Math Pentathlon',
-      description: 'A multi-round math competition that builds problem-solving and teamwork skills.',
+      description: 'A multi-round math competition that builds problem-solving and teamwork skills through interactive games.',
       contactEmail: 'englandptapresident@gmail.com',
       contactSubject: 'Math Pentathlon Inquiry',
     },
     {
       icon: '⭐',
       title: 'Math Superstars',
-      description: 'Weekly math enrichment packets that reinforce classroom learning at home.',
+      description: 'A self-paced math enrichment program for students in grades K-5 that reinforces classroom learning at home.',
       contactEmail: 'englandptapresident@gmail.com',
       contactSubject: 'Math Superstars Inquiry',
     },
@@ -92,7 +92,7 @@ const Programs = () => {
           <div>
             <h2 className="text-3xl font-bold mb-4 text-accent">Watch D.O.G.S.®</h2>
             <p className="text-lg text-blue-100 mb-8 leading-relaxed">
-              Dads Of Great Students — an innovative program being used by schools across America which helps them to be positively influenced by their father figures.
+              Dads Of Great Students: an innovative program being used by schools across America which helps them to be positively influenced by their father figures.
             </p>
             <a
               href="/programs/watchdogs"

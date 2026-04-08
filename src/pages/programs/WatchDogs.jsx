@@ -25,7 +25,7 @@ const WatchDogs = () => {
     <div>
       <PageHero 
         title="Watch D.O.G.S.® 🐕" 
-        subtitle="Dads Of Great Students — Supporting our school and kids" 
+        subtitle="Dads Of Great Students - Supporting our school and kids" 
       />
 
       <section className="py-20 bg-white">

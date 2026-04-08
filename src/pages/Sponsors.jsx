@@ -13,6 +13,14 @@ const Sponsors = () => {
     message: ''
   });
 
+  const platinumBenefits = [
+    'Prime logo placement on website homepage',
+    'Exclusive "Sponsor of the Month" feature',
+    'Logo on all event volunteer shirts',
+    'Largest banner display at all school events',
+    'Recognition in all PTA communications',
+  ];
+
   const goldBenefits = [
     'Logo on website homepage',
     'Recognition at all major PTA events',
@@ -64,6 +72,12 @@ const Sponsors = () => {
           </div>
 
           <SponsorTierSection 
+            tier="Platinum" 
+            benefits={platinumBenefits} 
+            placeholderCount={1} 
+          />
+
+          <SponsorTierSection 
             tier="Gold" 
             benefits={goldBenefits} 
             placeholderCount={2} 
@@ -96,7 +110,7 @@ const Sponsors = () => {
                     <div className="bg-white p-2 rounded-lg shadow-sm">
                       <Business className="w-6 h-6 text-primary" />
                     </div>
-                    <p className="text-gray-700 font-medium">Reach 500+ local families weekly.</p>
+                    <p className="text-gray-700 font-medium">Reach 1000+ local kids and their families weekly.</p>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="bg-white p-2 rounded-lg shadow-sm">

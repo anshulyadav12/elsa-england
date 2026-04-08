@@ -18,7 +18,7 @@ const Store = () => {
             </h2>
             <div className="w-20 h-1.5 bg-accent rounded-full mx-auto mb-8"></div>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg mb-12">
-              From t-shirts to water bottles, every purchase helps fund programs, events, and resources for our students and staff.
+              From t-shirts and water bottles to **PTA memberships**, every purchase helps fund programs, events, and resources for our students and staff.
             </p>
           </div>
 

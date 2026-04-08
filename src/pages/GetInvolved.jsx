@@ -26,7 +26,7 @@ const GetInvolved = () => {
     {
       title: 'Forms & Resources',
       icon: <FileText className="w-12 h-12 text-accent" />,
-      description: 'Guidebooks, absence forms, supply lists, and more — all in one convenient place for England families.',
+      description: 'Guidebooks, absence forms, supply lists, and more: all in one convenient place for England families.',
       cta: 'Go to Forms Hub',
       href: '/forms',
       isExternal: false,
@@ -47,7 +47,7 @@ const GetInvolved = () => {
     <div>
       <PageHero 
         title="Get Involved" 
-        subtitle="Every contribution — big or small — makes England Elementary better for every child" 
+        subtitle="Every contribution, big or small, makes England Elementary better for every child" 
       />
 
       <section className="py-20 bg-gray-50">

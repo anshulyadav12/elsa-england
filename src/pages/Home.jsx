@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import EventCard from '../components/EventCard';
 import BoardMemberCard from '../components/BoardMemberCard';
 import { Calendar, BookOpen, Users, ShoppingBag, ExternalLink } from 'lucide-react';
+import { fetchUpcomingEvents } from '../services/calendar';
 
 const Home = () => {
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const quickLinks = [
     { name: 'Events', icon: <Calendar className="w-8 h-8" />, href: '/events' },
     { name: 'Programs', icon: <BookOpen className="w-8 h-8" />, href: '/programs' },
@@ -12,23 +16,14 @@ const Home = () => {
     { name: 'Store', icon: <ShoppingBag className="w-8 h-8" />, href: '/store' },
   ];
 
-  const upcomingEvents = [
-    {
-      title: 'Spring Picnic',
-      date: 'May 2025',
-      description: 'End-of-year outdoor celebration for the whole family with food, games, and community fun.',
-    },
-    {
-      title: 'Meet Your Neighbor Night',
-      date: 'August 2025',
-      description: 'Community welcome event at the start of the school year to meet fellow England families.',
-    },
-    {
-      title: 'Spooky Fun Run',
-      date: 'October 2025',
-      description: 'Halloween-themed school run fundraiser. Students run laps in their favorite costumes!',
-    },
-  ];
+  useEffect(() => {
+    const loadEvents = async () => {
+      const events = await fetchUpcomingEvents(3);
+      setUpcomingEvents(events);
+      setLoading(false);
+    };
+    loadEvents();
+  }, []);
 
   const boardMembers = [
     { role: 'President', name: 'Vishal Patel', email: 'englandptapresident@gmail.com' },
@@ -66,7 +61,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* Abstract shapes for hero background */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-accent opacity-10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-96 h-96 bg-blue-400 opacity-10 rounded-full blur-3xl"></div>
       </section>
@@ -138,9 +132,17 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {upcomingEvents.map((event, i) => (
-              <EventCard key={i} {...event} />
-            ))}
+            {loading ? (
+              [...Array(3)].map((_, i) => (
+                <div key={i} className="h-64 bg-gray-100 animate-pulse rounded-xl shadow-md border-l-8 border-accent/20"></div>
+              ))
+            ) : upcomingEvents.length > 0 ? (
+              upcomingEvents.map((event, i) => (
+                <EventCard key={i} {...event} />
+              ))
+            ) : (
+              <p className="text-gray-500 italic col-span-3">Check back soon for more upcoming events!</p>
+            )}
           </div>
 
           <div className="mt-12 text-center md:hidden">

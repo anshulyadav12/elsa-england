@@ -35,7 +35,7 @@ const SchoolSupplies = () => {
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-6">Effortless Preparation</h2>
               <p className="text-xl leading-relaxed text-blue-100 max-w-3xl mx-auto">
-                The England PTA offers pre-packaged school supply kits for each grade level. Everything your child needs for the school year, curated by their teacher — delivered right to the school before the first day.
+                The England PTA offers pre-packaged school supply kits for each grade level. Everything your child needs for the school year, curated by their teacher: delivered right to the school before the first day.
               </p>
             </div>
           </div>

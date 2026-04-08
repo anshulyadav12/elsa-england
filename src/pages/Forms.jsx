@@ -30,6 +30,13 @@ const Forms = () => {
       href: 'https://drive.google.com/drive/folders/1CJ6wu0a7EHYUPtHVwfuAQq3QRMUuT47B',
     },
     {
+      icon: '🍎',
+      title: 'Staff Favorites Spreadsheet',
+      description: 'A guide for teacher gifts and classroom wishlists for the 2025-26 school year.',
+      href: '#', // Placeholder or actual link if found
+      comingSoon: true,
+    },
+    {
       icon: '🍕',
       title: 'Food Menus',
       description: 'View school lunch and breakfast menus provided by Round Rock ISD Food Services.',

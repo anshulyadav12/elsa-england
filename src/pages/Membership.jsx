@@ -37,13 +37,23 @@ const Membership = () => {
             <div className="bg-primary text-white p-10 md:p-16 rounded-3xl shadow-2xl relative overflow-hidden">
               <div className="relative z-10 text-center">
                 <h2 className="text-3xl font-bold mb-6">Ready to become a member?</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+                  <div className="bg-white/10 p-4 rounded-xl border border-white/20">
+                    <p className="text-2xl font-bold text-accent">$10</p>
+                    <p className="text-sm">Individual</p>
+                  </div>
+                  <div className="bg-white/10 p-4 rounded-xl border border-white/20">
+                    <p className="text-2xl font-bold text-accent">$15</p>
+                    <p className="text-sm">Family (2 Adults)</p>
+                  </div>
+                  <div className="bg-white/10 p-4 rounded-xl border border-white/20">
+                    <p className="text-2xl font-bold text-accent">$8</p>
+                    <p className="text-sm">Faculty/Staff</p>
+                  </div>
+                </div>
                 <p className="text-blue-100 mb-10 text-lg leading-relaxed">
                   Join hundreds of other Elsa England families in supporting our school. Every membership counts!
                 </p>
-                <div className="bg-white/10 p-6 rounded-2xl mb-10 backdrop-blur-sm border border-white/20">
-                  <p className="text-sm font-bold text-accent uppercase tracking-widest mb-2">Member Benefits</p>
-                  <p className="text-white font-medium">Voting Rights • Event Access • School Support</p>
-                </div>
                 <a
                   href="https://txpta.my.salesforce-sites.com/JoinPTA?_gl=1*sqclk6*_ga*MTg2MTMzMDk1MS4xNzYxMTQ3NTM1*_ga_KF2J8CWMTX*czE3NjExNDc1MzUkbzEkZzAkdDE3NjExNDc1MzUkajYwJGwwJGgw"
                   target="_blank"
