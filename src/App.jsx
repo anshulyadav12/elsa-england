@@ -22,6 +22,12 @@ import Announcements from './pages/Announcements';
 import Yearbook from './pages/programs/Yearbook';
 import SchoolSupplies from './pages/programs/SchoolSupplies';
 import WatchDogs from './pages/programs/WatchDogs';
+import GeographySuperstars from './pages/programs/GeographySuperstars';
+import MathPentathlon from './pages/programs/MathPentathlon';
+import MathSuperstars from './pages/programs/MathSuperstars';
+import Reflections from './pages/programs/Reflections';
+import SpellingBee from './pages/programs/SpellingBee';
+import MathKangaroo from './pages/programs/MathKangaroo';
 
 const App = () => {
   return (
@@ -39,6 +45,12 @@ const App = () => {
             <Route path="/programs/yearbook" element={<Yearbook />} />
             <Route path="/programs/school-supplies" element={<SchoolSupplies />} />
             <Route path="/programs/watchdogs" element={<WatchDogs />} />
+            <Route path="/programs/geography-superstars" element={<GeographySuperstars />} />
+            <Route path="/programs/math-pentathlon" element={<MathPentathlon />} />
+            <Route path="/programs/math-superstars" element={<MathSuperstars />} />
+            <Route path="/programs/reflections" element={<Reflections />} />
+            <Route path="/programs/spelling-bee" element={<SpellingBee />} />
+            <Route path="/programs/math-kangaroo" element={<MathKangaroo />} />
             <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/volunteer" element={<Volunteer />} />
             <Route path="/forms" element={<Forms />} />

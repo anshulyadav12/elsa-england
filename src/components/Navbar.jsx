@@ -21,9 +21,15 @@ const Navbar = () => {
       name: 'Programs',
       children: [
         { name: 'All Programs', href: '/programs' },
+        { name: 'Geography Superstars', href: '/programs/geography-superstars' },
+        { name: 'Math Pentathlon', href: '/programs/math-pentathlon' },
+        { name: 'Math Superstars', href: '/programs/math-superstars' },
+        { name: 'Math Kangaroo', href: '/programs/math-kangaroo' },
+        { name: 'Reflections', href: '/programs/reflections' },
+        { name: 'Spelling Bee', href: '/programs/spelling-bee' },
+        { name: 'Watch D.O.G.S.', href: '/programs/watchdogs' },
         { name: 'Yearbook', href: '/programs/yearbook' },
         { name: 'School Supplies', href: '/programs/school-supplies' },
-        { name: 'Watch D.O.G.S.', href: '/programs/watchdogs' },
       ],
     },
     {

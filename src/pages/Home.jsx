@@ -90,7 +90,7 @@ const Home = () => {
             </Link>
             <Link
               to="/why-join"
-              className="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-primary transition-all text-center"
+              className="bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all text-center"
             >
               Why Join the PTA?
             </Link>
@@ -161,7 +161,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-4">Shop PTA Spirit Wear & More</h2>
           <p className="text-xl text-primary font-medium mb-10 opacity-80">
-            Support our school while showing your England pride!
+            T-shirts, sweatpants, key chains, and more. Support our school while showing your England pride!
           </p>
           <Link
             to="/store"

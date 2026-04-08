@@ -77,7 +77,7 @@ const WhyJoin = () => {
       </section>
 
       {/* Value Proposition Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-primary mb-4">What Your Membership Supports</h2>
@@ -108,19 +108,19 @@ const WhyJoin = () => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Join?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">Ready to Join?</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link
               to="/membership"
-              className="bg-accent text-primary font-extrabold py-4 px-10 rounded-xl text-lg hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
+              className="bg-accent text-primary font-extrabold py-4 px-10 rounded-xl text-lg hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 shadow-lg"
             >
               Join Now <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               to="/volunteer"
-              className="bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded-xl text-lg hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-2"
+              className="bg-white border-2 border-primary text-primary font-bold py-4 px-10 rounded-xl text-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
             >
               See Volunteer Opportunities
             </Link>
